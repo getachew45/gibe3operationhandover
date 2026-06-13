@@ -1,8 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-// TODO: የእርስዎን የ Firebase ኮንፊገሬሽን እዚህ ይተኩ
-// Import the functions you need from the SDKs you need
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    
+    // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -16,12 +15,13 @@ const firebaseConfig = {
   projectId: "gibe3operationhandover",
   storageBucket: "gibe3operationhandover.firebasestorage.app",
   messagingSenderId: "588234679712",
-  appId: "1:588234679712:web:bc48d2298640261572f0c5",
-  measurementId: "G-CFCHKRJD75"
+  appId: "1:588234679712:web:c358c27dbbd4659f72f0c5",
+  measurementId: "G-LPKZDDEWZG"
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const analytics = getAnalytics(app);
 
 document.getElementById("submitBtn").addEventListener("click", async () => {
     const dateValue = document.getElementById("date").value;
